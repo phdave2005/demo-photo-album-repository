@@ -1,0 +1,21 @@
+a {
+    transition: 0.7s opacity, 0.7s color;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.flex-container {
+    --list-item-bg-color: lightgray;
+    background: var(--list-item-bg-color, lightgray);
+    height: 150px;
+}
+
+.flex-container section:last-child {
+    background: darkgray;
+}
+
+.ml-8px {
+    margin-left: 8px;
+}

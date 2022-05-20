@@ -1,0 +1,24 @@
+<div class="bg-black">
+  <div class="d-flex controls justify-content-around text-white">
+    <label class="p-2 d-flex align-items-center">
+      <input type=radio name="photonum" (click)="selectPhotos(20)" checked><span [innerHTML]="controlText.defaultControlText"></span>
+    </label>
+    <label class="p-2 d-flex align-items-center">
+      <input type=radio name="photonum" (click)="selectPhotos(5)"><span [innerHTML]="controlText.showLessControlText"></span>
+    </label>
+    <label class="p-2 d-flex align-items-center">
+      <input type=radio name="photonum" (click)="selectPhotos(100)"><span [innerHTML]="controlText.showMoreControlText"></span>
+    </label>
+    <label class="p-2 d-flex align-items-center">
+      <input type=number
+        [min]="0"
+        [max]="5000"
+        (change)="setStartAt($event)">&nbsp;<span [innerHTML]="controlText.customControlText"></span>
+    </label>
+  </div>
+  <ul class="p-2">
+    <li *ngFor="let photo of photos" class="mb-2">
+      <app-photo-album-list-item [photo]="photo"></app-photo-album-list-item>
+    </li>
+  </ul>
+</div>

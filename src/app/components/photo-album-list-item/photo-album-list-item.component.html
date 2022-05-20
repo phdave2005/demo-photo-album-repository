@@ -1,0 +1,36 @@
+<div class="d-flex flex-container">
+  <img [src]="thumbnailUrl"
+       width="150"
+       height="150"
+       alt="title">
+  <article class="d-flex flex-column justify-content-center p-3 w-75">
+    <h2 class="h5">
+      <b>Title: </b>
+      <span [innerHTML]="title"></span>
+    </h2>
+    <section class="h5">
+      <b>Photo ID: </b><span [innerHTML]="id"></span>
+    </section>
+    <section class="h5">
+      <b>Actions:</b>
+      <p class="h5 d-flex justify-content-around">
+        <span>
+          <a [href]="url"
+            target="_blank"
+            [tabindex]="0"
+            [attr.aria-label]="openText"
+            [innerHTML]="openText"></a>
+          <i class="fas fa-external-link-alt ml-8px"></i>
+        </span>  
+        <span>
+          <a href="src/assets/sample.png"
+             [tabindex]="0"
+             download="sample.png"
+             [attr.aria-label]="openText"
+             [innerHTML]="downloadText"></a>
+          <i class="fas fa-download ml-8px"></i>
+        </span>
+      </p>
+    </section>
+  </article>
+</div>
